@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="RecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKX-NQ-bSO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Cxz-Qc-4em">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-Wj-enr">
+                                <rect key="frame" x="142" y="76" width="109.33333333333331" height="27.333333333333329"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MGb-qz-E8j">
+                                <rect key="frame" x="12" y="125.99999999999999" width="368" height="228.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-ev-9Vx">
+                                        <rect key="frame" x="67" y="0.0" width="234" height="136.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wave" translatesAutoresizingMaskIntoConstraints="NO" id="Ynn-TV-hOA">
+                                        <rect key="frame" x="25" y="136.66666666666669" width="318" height="92"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy7-2S-Lfx">
+                                <rect key="frame" x="161.66666666666666" y="727" width="70" height="70"/>
+                                <state key="normal" image="Record"/>
+                                <connections>
+                                    <action selector="recordWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HoD-0g-CEz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg5-cf-VMs">
+                                <rect key="frame" x="257.66666666666669" y="737" width="50" height="50"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5d-Xw-g1c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmL-Ge-LUn">
+                                <rect key="frame" x="85.666666666666686" y="737" width="50" height="50"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="playWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HA-t5-W9q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t3J-Gf-LZv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hy7-2S-Lfx" firstAttribute="centerX" secondItem="UKX-NQ-bSO" secondAttribute="centerX" id="7MX-ws-fgn"/>
+                            <constraint firstItem="t3J-Gf-LZv" firstAttribute="trailing" secondItem="MGb-qz-E8j" secondAttribute="trailing" constant="13" id="Cvh-M9-Faz"/>
+                            <constraint firstItem="Cxz-Qc-4em" firstAttribute="leading" secondItem="t3J-Gf-LZv" secondAttribute="leading" id="I4d-JZ-9Ej"/>
+                            <constraint firstItem="Fg5-cf-VMs" firstAttribute="top" secondItem="Cxz-Qc-4em" secondAttribute="bottom" constant="-115" id="NHt-2J-Sch"/>
+                            <constraint firstItem="MGb-qz-E8j" firstAttribute="leading" secondItem="t3J-Gf-LZv" secondAttribute="leading" constant="12" id="OcM-Fo-edv"/>
+                            <constraint firstItem="HmL-Ge-LUn" firstAttribute="top" secondItem="Cxz-Qc-4em" secondAttribute="bottom" constant="-115" id="XX7-wU-HC9"/>
+                            <constraint firstAttribute="bottom" secondItem="Cxz-Qc-4em" secondAttribute="bottom" id="Zp8-45-iFn"/>
+                            <constraint firstItem="MGb-qz-E8j" firstAttribute="top" secondItem="ibf-Wj-enr" secondAttribute="bottom" constant="22.5" id="apH-cX-hel"/>
+                            <constraint firstItem="ibf-Wj-enr" firstAttribute="top" secondItem="t3J-Gf-LZv" secondAttribute="top" constant="17" id="avF-H6-uXY"/>
+                            <constraint firstItem="t3J-Gf-LZv" firstAttribute="trailing" secondItem="Cxz-Qc-4em" secondAttribute="trailing" id="gPm-Wo-yk2"/>
+                            <constraint firstItem="Fg5-cf-VMs" firstAttribute="leading" secondItem="hy7-2S-Lfx" secondAttribute="trailing" constant="26" id="lmR-vh-44Z"/>
+                            <constraint firstItem="Cxz-Qc-4em" firstAttribute="bottom" secondItem="hy7-2S-Lfx" secondAttribute="bottom" constant="55" id="mf4-Ml-zYw"/>
+                            <constraint firstItem="hy7-2S-Lfx" firstAttribute="leading" secondItem="HmL-Ge-LUn" secondAttribute="trailing" constant="26" id="ntF-c6-fjl"/>
+                            <constraint firstItem="Cxz-Qc-4em" firstAttribute="top" secondItem="UKX-NQ-bSO" secondAttribute="top" id="oRg-KC-dz4"/>
+                            <constraint firstItem="ibf-Wj-enr" firstAttribute="centerX" secondItem="UKX-NQ-bSO" secondAttribute="centerX" id="ooQ-54-qlW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="HmL-Ge-LUn" id="H3A-sI-pjY"/>
+                        <outlet property="recordButton" destination="hy7-2S-Lfx" id="7az-12-71s"/>
+                        <outlet property="stopButton" destination="Fg5-cf-VMs" id="zgK-GL-KtL"/>
+                        <outlet property="timeLabel" destination="2Qe-ev-9Vx" id="uEF-gr-6mF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="-16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Play" width="50" height="50"/>
+        <image name="Record" width="70" height="70"/>
+        <image name="Stop" width="50" height="50"/>
+        <image name="Wave" width="318" height="92"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
